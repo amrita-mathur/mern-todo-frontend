@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoListPage from './pages/TodoListPage';
+import AddNewTodo from './components/AddNewTodo';
+import { useState } from 'react';
+import EditTask from './components/EditTask';
+import { createContext } from 'react';
 
+export const TaskContext = createContext(null);
 function App() {
+  
+  const [editFlag, setEditFlag] = useState(false);
+  const [id, setId] = useState("");
   return (
+    <TaskContext.Provider value={{ id, setEditFlag, setId}}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {editFlag && <EditTask/>} 
+      {!editFlag && <AddNewTodo />}
+      <TodoListPage/>
     </div>
+    </TaskContext.Provider>
   );
 }
+
 
 export default App;
