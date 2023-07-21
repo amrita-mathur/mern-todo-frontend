@@ -41,7 +41,7 @@ const Todo = (props) => {
       
       <Card.Text as="h5">
         <div className="my-3">
-          <Button variant="warning" onClick={deleteHandler}>Delete</Button> <Button variant="success" id="todo-edit" onClick={editHandler}>Edit</Button>
+          <Button variant="warning" onClick={deleteHandler}>Delete</Button> <Button variant="success" id="todo-edit" onClick={editHandler} onTouchMove={editHandler}>Edit</Button>
           </div>
       </Card.Text>
       

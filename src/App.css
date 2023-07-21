@@ -6,6 +6,7 @@ body{
    display: flex;
    flex-direction: column;
    margin: 3 rem;
+   justify-content: center;
 }
 
 #edit-save{

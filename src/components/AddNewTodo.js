@@ -38,7 +38,7 @@ const AddNewTodo = () => {
        
       </div>
       
-      <button type="submit" class="btn btn-success my-3" onClick={handleAddTask}>Add</button>
+      <button type="submit" class="btn btn-success my-3" onClick={handleAddTask} onTouchMove={handleAddTask}>Add</button>
     </form>
     </div>
   );

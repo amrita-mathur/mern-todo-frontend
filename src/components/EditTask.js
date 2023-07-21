@@ -100,6 +100,7 @@ const EditTask = (props) => {
         <button
           type="submit"
           class="btn btn-success my-3"
+          onTouchMove={saveHandler}
           onClick={saveHandler}
           id="edit-save"
         >
