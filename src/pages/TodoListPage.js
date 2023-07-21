@@ -24,8 +24,6 @@ const TodoListPage = (props) => {
 
   return (
     <div className="container responsive" style={{margin: 'auto', marginTop: '2rem'}}>
-
-
         {Array.from(todoList).map((todo) => (
           
           <Todo item={todo} key={todo._id}/>
