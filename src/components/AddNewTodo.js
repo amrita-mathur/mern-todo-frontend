@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { useContext } from "react";
+import {TaskContext} from '../App';
 
 const AddNewTodo = () => {
     const [taskTitle, setTaskTitle] = useState("");
     const [description, setDescription] = useState("");
+    const { url } = useContext(TaskContext);
 
     const handleAddTask = () => {
        
-        axios.post('http://localhost:3001/todos', {
+        axios.post(url, {
           title: taskTitle,
           description: description,
           completed: false

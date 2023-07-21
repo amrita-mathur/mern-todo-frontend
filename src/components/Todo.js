@@ -7,12 +7,12 @@ import { useContext } from "react";
 
 const Todo = (props) => {
 
-  const { setEditFlag, setId } = useContext(TaskContext);
+  const { setEditFlag, setId, url } = useContext(TaskContext);
 
   const deleteHandler = async () => {
      const _id = props.item._id;
      console.log("Id:", _id)
-     await axios.delete(`http://localhost:3001/todos/${_id}`);
+     await axios.delete(`${url}/${_id}`);
      window.location.reload()
   }
 

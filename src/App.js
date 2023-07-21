@@ -9,8 +9,9 @@ function App() {
   
   const [editFlag, setEditFlag] = useState(false);
   const [id, setId] = useState("");
+  const url = "https://todolistapp-yo5k.onrender.com";
   return (
-    <TaskContext.Provider value={{ id, setEditFlag, setId}}>
+    <TaskContext.Provider value={{ id, setEditFlag, setId, url}}>
     <div className="App">
       {editFlag && <EditTask/>} 
       {!editFlag && <AddNewTodo />}

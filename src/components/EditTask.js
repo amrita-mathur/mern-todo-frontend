@@ -9,13 +9,13 @@ const EditTask = (props) => {
   const [completed, setCompleted] = useState(false);
   const [inProgress, setInProgress] = useState(false);
 
-  const {id, setEditFlag} = useContext(TaskContext);
+  const {id, setEditFlag, url} = useContext(TaskContext);
   
 
   useEffect(() => {
     console.log(id);
     axios
-      .get(`http://localhost:3001/todos/${id}`)
+      .get(`${url}/${id}`)
       .then((res) => {
         setTaskTitle(res.data.title);
         setDescription(res.data.description);
@@ -29,7 +29,7 @@ const EditTask = (props) => {
   const saveHandler = () => {
     console.log(id);
     console.log(completed, inProgress);
-    axios.put(`http://localhost:3001/todos/${id}`, {
+    axios.put(`${url}/${id}`, {
         id: id,
         title: taskTitle,
         description: description,
