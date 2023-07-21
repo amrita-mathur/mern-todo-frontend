@@ -29,7 +29,9 @@ const TodoListPage = (props) => {
         <Row>
 
         {Array.from(todoList).map((todo) => (
+          <Col sm={12} md={6} lg={4}>
           <Todo item={todo} key={todo._id}/>
+          </Col>
           ))}
           </Row>
       </Container>
