@@ -23,7 +23,7 @@ const TodoListPage = (props) => {
   }, []);
 
   return (
-    <div class="container" style={{margin: 'auto', marginTop: '2rem'}}>
+    <div className="container responsive" style={{margin: 'auto', marginTop: '2rem'}}>
 
 
         {Array.from(todoList).map((todo) => (

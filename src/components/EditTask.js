@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useContext } from "react";
 import {TaskContext} from '../App';
+import '../App.css';
 
 const EditTask = (props) => {
   const [taskTitle, setTaskTitle] = useState("");
@@ -55,9 +56,8 @@ const EditTask = (props) => {
 
   return (
     <div
-      id="edit-task"
+      className="responsive"
       style={{
-        width: "30%",
         margin: "auto",
         marginTop: "2rem",
         padding: "2rem",
@@ -101,6 +101,7 @@ const EditTask = (props) => {
           type="submit"
           class="btn btn-success my-3"
           onClick={saveHandler}
+          id="edit-save"
         >
           Save
         </button>

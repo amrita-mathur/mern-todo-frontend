@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import {TaskContext} from '../App';
 import { useContext } from "react";
+import '../App.css';
 
 const Todo = (props) => {
 
@@ -38,7 +39,7 @@ const Todo = (props) => {
       
       <Card.Text as="h5">
         <div className="my-3">
-          <Button variant="warning" onClick={deleteHandler}>Delete</Button> <Button variant="success" onClick={editHandler}>Edit</Button>
+          <Button variant="warning" onClick={deleteHandler}>Delete</Button> <Button variant="success" id="todo-edit" onClick={editHandler}>Edit</Button>
           </div>
       </Card.Text>
       

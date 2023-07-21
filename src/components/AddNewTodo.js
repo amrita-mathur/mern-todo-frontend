@@ -25,7 +25,7 @@ const AddNewTodo = () => {
 
    
     return(
-      <div style={{margin: 'auto', marginTop: '2rem', padding: '2rem'}}>
+      <div style={{margin: 'auto', marginTop: '2rem', padding: '2rem'}} className='responsive'>
       <form >
       <div class="form-group">
         <label for="title">New Task Title</label>

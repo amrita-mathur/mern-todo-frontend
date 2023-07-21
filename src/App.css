@@ -7,3 +7,19 @@ body{
    flex-direction: column;
    margin: 3 rem;
 }
+
+#edit-save{
+   z-index: 99;
+   cursor: pointer;
+}
+
+#todo-edit{
+   z-index: 99;
+   cursor: pointer;
+}
+
+@media screen and (min-width: 600px){
+   .responsive{
+      width: 50%;
+   }
+}
