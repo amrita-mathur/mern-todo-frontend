@@ -9,7 +9,7 @@ function App() {
   
   const [editFlag, setEditFlag] = useState(false);
   const [id, setId] = useState("");
-  const url = "https://todolistapp-yo5k.onrender.com";
+  const url = "https://todolistapp-yo5k.onrender.com/todos";
   return (
     <TaskContext.Provider value={{ id, setEditFlag, setId, url}}>
     <div className="App">

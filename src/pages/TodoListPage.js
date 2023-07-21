@@ -12,7 +12,7 @@ const TodoListPage = (props) => {
   const { url } = useContext(TaskContext);
 
   useEffect(() => {
-    console.log(url);
+   
     axios
       .get(url)
       .then((res) => setTodoList(res.data))
