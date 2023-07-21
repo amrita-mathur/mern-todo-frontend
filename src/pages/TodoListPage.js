@@ -23,7 +23,7 @@ const TodoListPage = (props) => {
   }, []);
 
   return (
-    <div style={{width: '30%', margin: 'auto', marginTop: '2rem'}}>
+    <div style={{margin: 'auto', marginTop: '2rem'}}>
 
       <Container>
         <Row>
