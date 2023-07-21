@@ -31,7 +31,7 @@ const Todo = (props) => {
     
     <Card.Body>
      
-        <Card.Title as="div" style={{backgroundColor: '#F0F0F0', borderRadius: '5px', padding: '0.5rem'}}>
+        <Card.Title as="div" style={{backgroundColor: '#F0F0F0', borderRadius: '5px', padding: '0.5rem'}} className="responsive">
           <strong>Title: {props.item.title}</strong>
         </Card.Title>
         <Card.Text as="h6"><strong>Description:</strong> {props.item.description}</Card.Text>
