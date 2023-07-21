@@ -26,7 +26,7 @@ const TodoListPage = (props) => {
     <div style={{width: '30%', margin: 'auto', marginTop: '2rem'}}>
 
       <Container>
-        <Row sm={12} md={6} lg={4}>
+        <Row>
 
         {Array.from(todoList).map((todo) => (
           
