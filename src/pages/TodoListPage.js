@@ -27,7 +27,7 @@ const TodoListPage = (props) => {
       <Container>
         <Row>
 
-        {todoList.map((todo) => (
+        {Array.from(todoList).map((todo) => (
           <Todo item={todo} key={todo._id}/>
           ))}
           </Row>
