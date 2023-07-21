@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Todo from "../components/Todo";
-import { Container, Row, Col } from "react-bootstrap";
+import '../App.css';
 import { useContext } from "react";
 import {TaskContext} from '../App';
 
@@ -23,18 +23,15 @@ const TodoListPage = (props) => {
   }, []);
 
   return (
-    <div style={{margin: 'auto', marginTop: '2rem'}}>
+    <div class="container" style={{margin: 'auto', marginTop: '2rem'}}>
 
-      <Container>
-        <Row>
 
         {Array.from(todoList).map((todo) => (
           
           <Todo item={todo} key={todo._id}/>
         
           ))}
-          </Row>
-      </Container>
+        
  
           </div>
   );
